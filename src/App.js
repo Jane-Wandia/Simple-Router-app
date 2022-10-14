@@ -23,6 +23,11 @@ class App extends Component  {
     return ( <h1>Enjoy your Visit</h1>)
   }
 }/>
+<Route path="/adios" exact strict render={
+  ()=>{
+    return ( <h1>Leaving? Adios!</h1>)
+  }
+}/>
     </div>
     </Router>
   );
