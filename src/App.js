@@ -18,6 +18,11 @@ class App extends Component  {
     return ( <h1> This is my About</h1>)
   }
 }/>
+<Route path="/visit" exact strict render={
+  ()=>{
+    return ( <h1>Enjoy your Visit</h1>)
+  }
+}/>
     </div>
     </Router>
   );
