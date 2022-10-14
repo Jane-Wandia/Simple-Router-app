@@ -81,7 +81,7 @@ class App extends Component  {
   }
 }/>
  <Route path="/strager/:strangerName" exact strict render={({match})=>(
-          this.state.loggedIn ? ( <User username={match.params.username}/>) : (<Redirect to='/greatings' />)
+          this.state.loggedIn ? ( <stranger strangerName={match.params.strangerName}/>) : (<Redirect to='/greatings' />)
         )}/>
     </div>
     </Router>
