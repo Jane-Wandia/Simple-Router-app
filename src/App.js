@@ -18,6 +18,13 @@ class App extends Component  {
         {color:'green'}
       }>Home</NavLink>
       </li>
+      </ul>
+      <ul>
+        <li>
+      <NavLink to="/greatings" activeStyle={
+        {color:'green'}
+      }>Greatings</NavLink>
+      </li>
       <li>
       <NavLink to="/about"activeStyle={
         {color:'green'}
@@ -29,7 +36,7 @@ class App extends Component  {
       }>Visit</NavLink>
       </li>
       <li>
-      <NavLink to="/adios!"activeStyle={
+      <NavLink to="/adios"activeStyle={
         {color:'green'}
       }>Adios!</NavLink>
       </li>
@@ -39,9 +46,14 @@ class App extends Component  {
     return ( <h1>Welcome Home Stranger</h1>)
   }
 }/>
+<Route path="/greatings" exact strict render={
+  ()=>{
+    return ( <h1>Greatings, How are you Today?</h1>)
+  }
+}/>
 <Route path="/about" exact strict render={
   ()=>{
-    return ( <h1> This is my About</h1>)
+    return ( <h1> Feel Free to Roam About</h1>)
   }
 }/>
 <Route path="/visit" exact strict render={
