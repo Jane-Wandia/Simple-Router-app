@@ -12,7 +12,14 @@ class App extends Component  {
   return (
     <Router>
     <div className="App">
-
+      <ul>
+        <li>
+      <Link to="/">Home</Link>
+      <Link to="/">About</Link>
+      <Link to="/">Visit</Link>
+      <Link to="/">Adios!</Link>
+      </li>
+  </ul>   
 <Route path="/" exact strict render={
   ()=>{
     return ( <h1>Welcome Home Stranger</h1>)
