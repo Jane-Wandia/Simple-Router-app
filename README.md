@@ -30,7 +30,7 @@ contact me via my email janekigenyi@gmail.com
 
 How to Use the Website
 
-$git clone https://github.com/techsithgit/react-router.git
+$git clone git@github.com:Jane-Wandia/Simple-Router-app.git
 $cd react-router
 $npm install
 $npm start
