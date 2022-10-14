@@ -8,12 +8,12 @@ class App extends Component  {
     <Router>
     <div className="App">
 
-<Route path="/" render={
+<Route path="/" exact render={
   ()=>{
     return ( <h1>Welcome Home</h1>)
   }
 }/>
-<Route path="/about" render={
+<Route path="/about" exact render={
   ()=>{
     return ( <h1> This is my About</h1>)
   }
