@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Link, NavLink, Redirect, Prompt} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
+
+const Stranger =() => {
+  return(<h1>Welcome Stranger</h1>)
+}
+
 class App extends Component  {
   render() {
   return (
@@ -10,7 +15,7 @@ class App extends Component  {
 
 <Route path="/" exact strict render={
   ()=>{
-    return ( <h1>Welcome Home</h1>)
+    return ( <h1>Welcome Home Stranger</h1>)
   }
 }/>
 <Route path="/about" exact strict render={
@@ -28,6 +33,7 @@ class App extends Component  {
     return ( <h1>Leaving? Adios!</h1>)
   }
 }/>
+<Route path= "/stranger" exact strict component={Stranger}/>
     </div>
     </Router>
   );
