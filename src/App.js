@@ -14,33 +14,31 @@ class App extends Component  {
     <div className="App">
       <ul>
         <li>
-      <NavLink to="/" activeStyle={
+      <NavLink to="/" exact activeStyle={
         {color:'green'}
       }>Home</NavLink>
       </li>
-      </ul>
-      <ul>
         <li>
-      <NavLink to="/greatings" activeStyle={
+      <NavLink to="/greatings" exact activeStyle={
         {color:'green'}
       }>Greatings</NavLink>
       </li>
       <li>
-      <NavLink to="/about"activeStyle={
+      <NavLink to="/about" exact activeStyle={
         {color:'green'}
       }>About</NavLink>
       </li>
       <li>
-      <NavLink to="/visit"activeStyle={
+      <NavLink to="/visit" exact activeStyle={
         {color:'green'}
       }>Visit</NavLink>
       </li>
       <li>
-      <NavLink to="/adios"activeStyle={
+      <NavLink to="/adios" exact activeStyle={
         {color:'green'}
       }>Adios!</NavLink>
       </li>
-  </ul>   
+  </ul> 
 <Route path="/" exact strict render={
   ()=>{
     return ( <h1>Welcome Home Stranger</h1>)
