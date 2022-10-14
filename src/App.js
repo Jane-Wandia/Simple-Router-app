@@ -11,8 +11,10 @@ class App extends Component  {
   state = {
     loggedIn:false
   }
-  loginHandle = () =>{
-    this.setstate({loggedIn:true})
+  loginHandle = () => {
+    this.setState(prevState =>({
+      loggedIn: !prevState.loggedIn
+      }))
   }
 
 
@@ -51,7 +53,7 @@ class App extends Component  {
       </li>
   </ul> 
 
-<input type="button" value="log in" onclick={this.loginHandle.bind(this)}/>
+<input type="button" value={this.state.loggedIn ? 'log out': 'log in'} onClick={this.loginHandle.bind(this)}/>
 
 <Route path="/" exact strict render={
   ()=>{
@@ -78,7 +80,7 @@ class App extends Component  {
     return ( <h1>Leaving? Adios!</h1>)
   }
 }/>
- <Route path="/user/:username" exact strict render={({match})=>(
+ <Route path="/strager/:strangerName" exact strict render={({match})=>(
           this.state.loggedIn ? ( <User username={match.params.username}/>) : (<Redirect to='/greatings' />)
         )}/>
     </div>
