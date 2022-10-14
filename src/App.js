@@ -3,8 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Link, NavLink, Redirect, Prompt} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 
-const Stranger =() => {
-  return(<h1>Welcome Stranger</h1>)
+const Stranger =({match}) => {
+  return(<h1>Welcome Stranger {match.params.strangername}</h1>)
 }
 
 class App extends Component  {
@@ -33,7 +33,7 @@ class App extends Component  {
     return ( <h1>Leaving? Adios!</h1>)
   }
 }/>
-<Route path= "/stranger" exact strict component={Stranger}/>
+<Route path= "/stranger/:strangername" exact strict component={Stranger}/>
     </div>
     </Router>
   );
