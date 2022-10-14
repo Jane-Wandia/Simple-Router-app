@@ -14,10 +14,24 @@ class App extends Component  {
     <div className="App">
       <ul>
         <li>
-      <Link to="/">Home</Link>
-      <Link to="/">About</Link>
-      <Link to="/">Visit</Link>
-      <Link to="/">Adios!</Link>
+      <NavLink to="/" activeStyle={
+        {color:'green'}
+      }>Home</NavLink>
+      </li>
+      <li>
+      <NavLink to="/about"activeStyle={
+        {color:'green'}
+      }>About</NavLink>
+      </li>
+      <li>
+      <NavLink to="/visit"activeStyle={
+        {color:'green'}
+      }>Visit</NavLink>
+      </li>
+      <li>
+      <NavLink to="/adios!"activeStyle={
+        {color:'green'}
+      }>Adios!</NavLink>
       </li>
   </ul>   
 <Route path="/" exact strict render={
