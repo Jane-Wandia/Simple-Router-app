@@ -52,6 +52,12 @@ class App extends Component  {
       }>Adios!</NavLink>
       </li>
   </ul> 
+  <Prompt
+            when={!this.state.loggedIn}
+            message={(location)=>{
+               return location.pathname.startsWith('/Stranger') ? 'Are you sure?' : true
+             }}
+          />
 
 <input type="button" value={this.state.loggedIn ? 'log out': 'log in'} onClick={this.loginHandle.bind(this)}/>
 
