@@ -13,6 +13,11 @@ class App extends Component  {
     return ( <h1>Welcome Home</h1>)
   }
 }/>
+<Route path="/about" render={
+  ()=>{
+    return ( <h1> This is my About</h1>)
+  }
+}/>
     </div>
     </Router>
   );
