@@ -8,6 +8,17 @@ const Stranger =({match}) => {
 }
 
 class App extends Component  {
+  state = {
+    loggedIn:false
+  }
+  loginHandle = () =>{
+    this.setstate({loggedIn:true})
+  }
+
+
+
+
+
   render() {
   return (
     <Router>
@@ -39,6 +50,9 @@ class App extends Component  {
       }>Adios!</NavLink>
       </li>
   </ul> 
+
+<input type="button" value="log in" onclick={this.loginHandle.bind(this)}/>
+
 <Route path="/" exact strict render={
   ()=>{
     return ( <h1>Welcome Home Stranger</h1>)
